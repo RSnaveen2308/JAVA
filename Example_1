@@ -1,1 +1,33 @@
-GJH
+/*Question
+Sample Input
+2
+0 2 10
+5 3 5
+
+Sample Output
+2 6 14 30 62 126 254 510 1022 2046
+8 14 26 50 98
+*/
+import java.util.*;
+import java.io.*;
+
+class Solution{
+    public static void main(String []argh){
+        Scanner sc = new Scanner(System.in);
+        int q=sc.nextInt();
+        for(int i=0;i<q;i++){
+            int a = sc.nextInt();
+            int b = sc.nextInt();
+            int n = sc.nextInt();
+            int total=a;
+            int temp=0;
+            for(int j=0;j<n;j++){
+                temp=((int)Math.pow(2,j))*b;
+                total=total+temp;
+                System.out.print(total+" ");
+            }
+            System.out.println();
+        }
+        
+    }
+}
